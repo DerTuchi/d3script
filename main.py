@@ -9,7 +9,7 @@ hide = win32gui.GetForegroundWindow()
 win32gui.ShowWindow(hide, win32con.SW_HIDE)
 '''
 
-#Config:
+# Config:
 strafe = 'r'
 vengeance = 'q'
 hungering_arrow = 'e'
@@ -19,8 +19,9 @@ open_map = 'm'
 # Creates the Keyboard
 kb = something.Controller()
 
+
 # presses a Button for x Seconds
-def make_r(time_sec):
+def make_strafe(time_sec):
     now = int(datetime.now().strftime("%H%M%S"))
     later = now + time_sec
     while later > int(datetime.now().strftime("%H%M%S")):
@@ -30,7 +31,7 @@ def make_r(time_sec):
         check_for_map_open()
     kb.release(strafe)
 
-
+#stops the script if Map was opened
 def check_for_map_open():
     if keyboard.is_pressed(open_map):
         kb.release(strafe)
@@ -56,7 +57,7 @@ while True:
     kb.release(companion)
     while a <= 20:
         check_for_map_open()
-        make_r(4)
+        make_strafe(4)
         a = a + 4
         time.sleep(0.2)
         kb.press(hungering_arrow)
