@@ -11,7 +11,7 @@ win32gui.ShowWindow(hide, win32con.SW_HIDE)
 
 #Config:
 strafe = 'r'
-vengance = 'q'
+vengeance = 'q'
 hungering_arrow = 'e'
 companion = 'w'
 open_map = 'm'
@@ -41,8 +41,8 @@ def check_for_map_open():
             kb.press(hungering_arrow)
             kb.release(hungering_arrow)
             time.sleep(0.2)
-            kb.press(vengance)
-            kb.release(vengance)
+            kb.press(vengeance)
+            kb.release(vengeance)
 
 
 # Concrete Script to loop the Combo
@@ -50,8 +50,8 @@ while True:
     check_for_map_open()
     a = 0
     time.sleep(0.2)
-    kb.press(vengance)
-    kb.release(vengance)
+    kb.press(vengeance)
+    kb.release(vengeance)
     kb.press(companion)
     kb.release(companion)
     while a <= 20:
