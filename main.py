@@ -31,7 +31,8 @@ def make_strafe(time_sec):
         check_for_map_open()
     kb.release(strafe)
 
-#stops the script if Map was opened
+
+# stops the script if Map was opened
 def check_for_map_open():
     if keyboard.is_pressed(open_map):
         kb.release(strafe)
@@ -61,4 +62,6 @@ while True:
         a = a + 4
         time.sleep(0.2)
         kb.press(hungering_arrow)
+        kb.press(vengeance)
         kb.release(hungering_arrow)
+        kb.release(vengeance)
